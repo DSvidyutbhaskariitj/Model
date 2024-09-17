@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Fire Prediction</title>
+</head>
+<body>
+    <h1>Welcome to Algerian Fire Prediction</h1>
+    <form action="{{ url_for('predict_data') }}" method="post">
+        <!-- Add input fields for model prediction -->
+        <input type="text" name="Gender" placeholder="Gender">
+        <input type="text" name="MultipleLines" placeholder="MultipleLines">
+        <input type="text" name="InternetService" placeholder="InternetService">
+        <input type="text" name="OnlineSecurity" placeholder="OnlineSecurity">
+        <input type="text" name="OnlineBackup" placeholder="OnlineBackup">
+        <input type="text" name="DeviceProtection" placeholder="DeviceProtection">
+        <input type="text" name="TechSupport" placeholder="TechSupport">
+        <input type="text" name="StreamingTV" placeholder="StreamingTV">
+        <input type="text" name="StreamingMovies" placeholder="StreamingMovies">
+        <input type="text" name="Contract" placeholder="Contract">
+        <input type="text" name="PaymentMethod" placeholder="PaymentMethod">
+        <input type="text" name="tenure" placeholder="tenure">
+        <input type="text" name="MonthlyCharges" placeholder="MonthlyCharges">
+        <input type="text" name="TotalCharges" placeholder="TotalCharges">
+
+        <button type="submit">Predict</button>
+    </form>
+    <h2>
+        The Churn Prediciton is {{results}}
+    </h2>
+</body>
+</html>
